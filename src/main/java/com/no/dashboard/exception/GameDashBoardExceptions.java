@@ -7,4 +7,10 @@ public class GameDashBoardExceptions {
             super(message, cause);
         }
     }
+
+    public static class UpdateGameException extends Exception{
+        public UpdateGameException(String message, Throwable cause) {
+            super(message, cause);
+        }
+    }
 }
