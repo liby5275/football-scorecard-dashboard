@@ -13,4 +13,16 @@ public class GameDashBoardExceptions {
             super(message, cause);
         }
     }
+
+    public static class FinishGameException extends Exception{
+        public FinishGameException(String message, Throwable cause) {
+            super(message, cause);
+        }
+    }
+
+    public static class GetMatchesOverviewException extends Exception{
+        public GetMatchesOverviewException(String message, Throwable cause) {
+            super(message, cause);
+        }
+    }
 }
