@@ -42,7 +42,7 @@ public class FifaDashboardService implements GameDashboardService{
             throw new UpdateGameException("Trying to update a match which is not present." +
                     " Please provide valid match", null);
         }else if(homeScore != 0 || awayScore !=0) {
-            // if both away and home score to update is zero, no need to
+            // if both away and home score to update are zero, no need to
             // update since its already there
             this.liveMatches.compute(matchId, (key,value) -> {
                 value.setHomeScore(homeScore);
@@ -94,7 +94,7 @@ public class FifaDashboardService implements GameDashboardService{
     }
 
     private String capitalize(String input) {
-        if(input.length() > 1){
+        if(null != input && !input.isBlank() && input.length() > 1){
             return input.substring(0,1).toUpperCase() + input.substring(1).toLowerCase();
         } else {
             return input.toUpperCase();
